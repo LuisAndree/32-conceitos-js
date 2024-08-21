@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM e Árvore de Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de DOM e Árvore de Layout</h1>
+
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+    </div>
+
+    <script>
+
+        const box1 = document.getElementById('box1');
+        const box2 = document.getElementById('box2');
+
+        box1.textContent = "Caixa 1";
+        box2.textContent = "Caixa 2";
+
+        box1.style.backgroundColor = 'lightgreen';
+        box2.style.backgroundColor = 'lightcoral';
+
+        const newBox = document.createElement('div');
+        newBox.className = 'box';
+        newBox.textContent = 'Nova Caixa';
+        newBox.style.backgroundColor = 'lightyellow';
+
+        document.querySelector('.container').appendChild(newBox);
+
+        setTimeout(() => {
+            newBox.remove(); 
+        }, 3000);
+    </script>
+</body>
+</html>
