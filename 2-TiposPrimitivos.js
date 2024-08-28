@@ -13,3 +13,4 @@ console.log(typeof numberVar);    // "number"
 console.log(typeof stringVar);    // "string"
 console.log(typeof bigintVar);    // "bigint"
 console.log(typeof symbolVar);    // "symbol"
+
