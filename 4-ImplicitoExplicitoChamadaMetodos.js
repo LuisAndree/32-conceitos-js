@@ -1,16 +1,16 @@
 // Conversão Implícita
-let x = "5" + 2;    // "52" (2 é convertido para string)
-let y = "5" * 2;    // 10 (string é convertida para número)
+let x = "5" + 2;    
+let y = "5" * 2;    
 
-console.log(x); // "52"
-console.log(y); // 10
+console.log(x); 
+console.log(y); 
 
 // Conversão Explícita
 let a = Number("10"); // Converte string para número
 let b = String(10);   // Converte número para string
 
-console.log(a); // 10
-console.log(b); // "10"
+console.log(a); 
+console.log(b); 
 
 // Chamada de Métodos
 let person = {
@@ -20,4 +20,4 @@ let person = {
     }
 };
 
-person.greet(); // "Hello, Alice"
+person.greet(); 
